@@ -1,0 +1,85 @@
+{% load static %}
+<html lang="pt">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'pw/css/styles.css'%}">
+        <meta charset="UTF-8">
+        <title>Formula 1</title>
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        {% block scripts %}
+        {% endblock scripts %}
+    </head>
+    <body>
+        <header>
+
+            <br>
+            <figure>
+                <img src="{% static 'img/Formula 1.jpg' %}" alt="Formula 1 Logo">
+            </figure>
+        </header>
+        <nav>
+            <div class="navbar">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'standings' %}">Standings</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Drivers
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'alonso' %}">Fernando Alonso</a>
+                        <a href="{% url 'botas' %}">Valtteri Bottas</a>
+                        <a href="{% url 'gasly' %}">Pierre Gasly</a>
+                        <a href="{% url 'giovinazzi' %}">Antonio Giovinazzi</a>
+                        <a href="{% url 'hamilton' %}">Lewis Hamilton</a>
+                        <a href="{% url 'latifi' %}">Nicolas Latifi</a>
+                        <a href="{% url 'leclerc' %}">Charles Leclerc</a>
+                        <a href="{% url 'mazepin' %}">Nikita Mazepin</a>
+                        <a href="{% url 'norris' %}">Lando Norris</a>
+                        <a href="{% url 'ocon' %}">Esteban Ocon</a>
+                        <a href="{% url 'perez' %}">Sergio Perez</a>
+                        <a href="{% url 'raikkonen' %}">Kimi Raikkonen</a>
+                        <a href="{% url 'ricciardo' %}">Daniel Ricciardo</a>
+                        <a href="{% url 'russel' %}">George Russell</a>
+                        <a href="{% url 'sainz' %}">Carlos Sainz</a>
+                        <a href="{% url 'schumacher' %}">Mick Schumacher</a>
+                        <a href="{% url 'stroll' %}">Lance Stroll</a>
+                        <a href="{% url 'tsunoda' %}">Yuki Tsunoda</a>
+                        <a href="{% url 'verstappen' %}">Max Verstappen</a>
+                        <a href="{% url 'vettel' %}">Sebastian Vettel</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Teams
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'romeo' %}">Alfa Romeo</a>
+                        <a href="{% url 'tauri' %}">AlphaTauri</a>
+                        <a href="{% url 'alpine' %}">Alpine</a>
+                        <a href="{% url 'aston' %}">Aston Martin</a>
+                        <a href="{% url 'ferrari' %}">Ferrari</a>
+                        <a href="{% url 'haas' %}">Haas</a>
+                        <a href="{% url 'mclaren' %}">McLaren</a>
+                        <a href="{% url 'mercedes' %}">Mercedes</a>
+                        <a href="{% url 'redbull' %}">Red Bull</a>
+                        <a href="{% url 'williams' %}">Williams</a>
+                    </div>
+                </div>
+                <a href="{% url 'contactForm' %}">Contact Form</a>
+                <a href="{% url 'quiz' %}">Quiz</a>
+                <a href="{% url 'comments' %}">Comments</a>
+                <a href="{% url 'about' %}">About</a>
+            </div>
+        </nav>
+
+<main>
+    {% block main %}
+    {% endblock %}
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block main %}
+    <h3>Nota final</h3>
+
+{% for resposta in respostas %}
+
+
+     <p> How many teams race in Formula 1? </p>
+    {% if resposta.question1 == 10 %}
+        <!--certo-->
+        <p>Correct</p>
+        <p>You answered {{ resposta.question1}}, and the answer was : 10</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question1 }}, and the answer was : 10</p>
+    {% endif %}
+
+    <hr>
+    <p>How many championships has Lewis Hamilton won?</p>
+    {% if resposta.question2 == 7 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question2 }}, and the answer was : 7</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question2 }}, and the answer was : 7</p>
+    {% endif %}
+
+    <hr>
+    <p> Which Team has won the most championships?</p>
+    {% if resposta.question3 == 2 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question3 }}, and the answer was : 2-> Ferrari</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question3 }}, and the answer was : 2-> Ferrari</p>
+    {% endif %}
+    <hr>
+    <p> For which team does Nicholas Latifi race for?</p>
+    {% if resposta.question4 == 1 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question4 }}, and the answer was : 1-> Williams</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question4 }}, and the answer was : 1-> Williams</p>
+    {% endif %}
+
+    <hr>
+    <p> What color is the Ferrari car?</p>
+    {% if resposta.question5 == 2 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question5 }}, and the answer was : 2-> red</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question5 }}, and the answer was : 2-> red</p>
+    {% endif %}
+
+    <hr>
+    <p> Where is the location of Haas's base?</p>
+    {% if resposta.question6 == 1 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question6 }}, and the answer was : 1-> United States</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question6 }}, and the answer was : 1-> United States</p>
+    {% endif %}
+
+    <hr>
+    <p> How many drivers race in a F1 race?</p>
+    {% if resposta.question7 == 20 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question7 }}, and the answer was : 20</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question7 }}, and the answer was : 20</p>
+    {% endif %}
+
+    <hr>
+    <p> How many drivers are from Europe?</p>
+    {% if resposta.question8 == 15 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question8 }}, and the answer was : 15</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question8 }}, and the answer was : 15</p>
+    {% endif %}
+
+    <hr>
+    <p> Who is the oldest driver?</p>
+    {% if resposta.question9 == 3 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question9 }}, and the answer was : 3-> kimi Raikkonen</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question9 }}, and the answer was : 3-> kimi Raikkonen</p>
+    {% endif %}
+
+    <hr>
+    <p> Who is Sebastian Vettel's teammate? </p>
+    {% if resposta.resposta10 == 2 %}
+        <p>Correct</p>
+        <p>You answered {{ resposta.question10 }}, and the answer was : 2-> Lance Stroll</p>
+    {% else %}
+        <p>Incorrect</p>
+        <p>You answered {{ resposta.question10 }}, and the answer was : 2-> Lance Stroll</p>
+    {% endif %}
+    <hr>
+
+
+{% endfor %}
+
+
+
+{% endblock %}
